@@ -1,0 +1,233 @@
+{
+    "variables": [],
+    "info": {
+        "name": "Pudo",
+        "_postman_id": "8a1c7f9a-9399-4777-a711-b3d9b3dddb57",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Integration API",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create an Order\n use this API to send an order to Pudo control panel",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "pudo.delivery",
+                            "path": "api\/agent\/order\/create",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{API-KEY}"
+                            },
+                            {
+                                "key": "Api-Version",
+                                "value": "v1"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_id\": \"GZUdkhoBCB28zVZRdljnwMUs67S2kNz821r4yKX3QzUWLnvWEM8tIlulfU4UMkHY.\",\n    \"branch_id\": \"342334.\",\n    \"order_price\": 40,\n    \"discount\": 0,\n    \"number_of_products\": 4,\n    \"deliver_fees\": 10,\n    \"pay_on_pickup\": 10,\n    \"collect_on_delivery\": 10,\n    \"Payment\": \"quo\",\n    \"pick_up_lng\": \"21.24354345.\",\n    \"pick_up_lat\": \"21.24354345.\",\n    \"shipment_number\": 44343,\n    \"shipment_weight\": \"2kg.\",\n    \"delivery_lng\": \"21.24354345.\",\n    \"delivery_lat\": \"22.134566566.\",\n    \"customer_name\": \"temporibus\",\n    \"customer_mobile\": \"1234567890.\",\n    \"delivery_time\": \"2020-03-01 16:22:11.\",\n    \"products\": \"[{\\\"name\\\":\\\"product name\\\",\\\"quantity\\\": 2,\\\"note\\\":\\\"if any note or leave it null\\\"},{\\\"name\\\":\\\"product name\\\",\\\"quantity\\\": 2,\\\"note\\\":\\\"if any note or leave it null\\\"}].\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Show  Order Details",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "pudo.delivery",
+                            "path": "api\/agent\/order\/show",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{API-KEY}"
+                            },
+                            {
+                                "key": "Api-Version",
+                                "value": "v1"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_id\": \"GZUdkhoBCB28zVZRdljnwMUs67S2kNz821r4yKX3QzUWLnvWEM8tIlulfU4UMkHY.\",\n    \"order_id\": \"342334.\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Update an Order\n use this API to update an order programmatically on Pudo.",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "pudo.delivery",
+                            "path": "api\/agent\/order\/update",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{API-KEY}"
+                            },
+                            {
+                                "key": "Api-Version",
+                                "value": "v1"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_id\": \"GZUdkhoBCB28zVZRdljnwMUs67S2kNz821r4yKX3QzUWLnvWEM8tIlulfU4UMkHY.\",\n    \"Order_id\": \"342334.\",\n    \"order_price\": 40,\n    \"discount\": 0,\n    \"number_of_products\": 4,\n    \"deliver_fees\": 10,\n    \"Payment\": \"quo\",\n    \"pick_up_lng\": \"21.24354345.\",\n    \"pick_up_lat\": \"21.24354345.\",\n    \"delivery_lng\": \"21.24354345.\",\n    \"delivery_lat\": \"22.134566566.\",\n    \"customer_name\": \"aut\",\n    \"customer_mobile\": \"1234567890.\",\n    \"delivery_time\": \"2020-03-01 16:22:11\",\n    \"shipment_number\": 44343,\n    \"shipment_weight\": \"2kg.\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Delete an Order\n use this API to delete an order programmatically from Pudo.",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "pudo.delivery",
+                            "path": "api\/agent\/order\/delete",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{API-KEY}"
+                            },
+                            {
+                                "key": "Api-Version",
+                                "value": "v1"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_id\": \"GZUdkhoBCB28zVZRdljnwMUs67S2kNz821r4yKX3QzUWLnvWEM8tIlulfU4UMkHY.\",\n    \"order_id\": \"342334.\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Assign Order to a driver\n this api to assign and order already existing on Pudo to a driver",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "pudo.delivery",
+                            "path": "api\/agent\/order\/assignToDriver",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{API-KEY}"
+                            },
+                            {
+                                "key": "Api-Version",
+                                "value": "v1"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_id\": \"GZUdkhoBCB28zVZRdljnwMUs67S2kNz821r4yKX3QzUWLnvWEM8tIlulfU4UMkHY.\",\n    \"order_id\": \"342334.\",\n    \"driver_id\": \"65435.\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                },
+                {
+                    "name": "Reassign Order to another Driver\n this api to reassign and order already existing on Pudo and assigned to a driver to another driver",
+                    "request": {
+                        "url": {
+                            "protocol": "https",
+                            "host": "pudo.delivery",
+                            "path": "api\/agent\/order\/reassignToDriver",
+                            "query": []
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "X-Authorization",
+                                "value": "{API-KEY}"
+                            },
+                            {
+                                "key": "Api-Version",
+                                "value": "v1"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"api_id\": \"GZUdkhoBCB28zVZRdljnwMUs67S2kNz821r4yKX3QzUWLnvWEM8tIlulfU4UMkHY.\",\n    \"order_id\": \"342334.\",\n    \"driver_id\": \"65435.\"\n}"
+                        },
+                        "description": "",
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}

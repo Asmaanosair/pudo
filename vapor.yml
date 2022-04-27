@@ -1,0 +1,39 @@
+id: 19392
+name: pudo
+environments:
+    production:
+        storage: pudo-uploads
+        memory: 1024
+        timeout: 20
+        cli-memory: 512
+        runtime: 'php-7.4:al2'
+        database: pudoProduction
+        domain: pudo.delivery
+        queues:
+          - default
+          - mail
+        build:
+            - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
+            - 'php artisan event:cache'
+            - 'yarn'
+            - 'yarn --cwd frontend'
+            - 'yarn prod && rm -rf node_modules && rm -rf frontend/node_modules'
+        deploy:
+            - 'php artisan migrate --force'
+
+    staging:
+        storage: pudo-uploads
+        memory: 1024
+        timeout: 20
+        cli-memory: 512
+        runtime: 'php-7.4:al2'
+        database: pudo
+        domain: staging.pudo.delivery
+        build:
+            - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install'
+            - 'php artisan event:cache'
+            - 'yarn'
+            - 'yarn --cwd frontend'
+            - 'yarn dev && rm -rf node_modules && rm -rf frontend/node_modules'
+        deploy:
+             - 'php artisan migrate --force'

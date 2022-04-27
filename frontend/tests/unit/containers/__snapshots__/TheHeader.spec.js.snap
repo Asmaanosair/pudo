@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TheHeader.vue renders correctly 1`] = `
+<cheader-stub
+  colorscheme="light"
+  fixed="true"
+  tag="header"
+  withsubheader="true"
+>
+  <ctoggler-stub
+    class="ml-3 d-lg-none"
+    inheader="true"
+    tag="button"
+  />
+   
+  <ctoggler-stub
+    class="ml-3 d-md-down-none"
+    inheader="true"
+    tag="button"
+  />
+   
+  <cheaderbrand-stub
+    alt="CoreUI Logo"
+    class="mx-auto d-lg-none"
+    height="46"
+    src="img/brand/coreui-vue-pro-logo.svg"
+    width="190"
+  />
+   
+  <cheadernav-stub
+    class="d-md-down-none mr-auto"
+  >
+    <cheadernavitem-stub
+      class="px-3"
+    >
+      <cheadernavlink-stub
+        activeclass="active"
+        event="click"
+        exactactiveclass="active"
+        routertag="a"
+        target="_self"
+        to="/dashboard"
+      >
+        
+        Dashboard
+      
+      </cheadernavlink-stub>
+    </cheadernavitem-stub>
+     
+    <cheadernavitem-stub
+      class="px-3"
+    >
+      <cheadernavlink-stub
+        activeclass="active"
+        event="click"
+        exact="true"
+        exactactiveclass="active"
+        routertag="a"
+        target="_self"
+        to="/users"
+      >
+        
+        Users
+      
+      </cheadernavlink-stub>
+    </cheadernavitem-stub>
+     
+    <cheadernavitem-stub
+      class="px-3"
+    >
+      <cheadernavlink-stub
+        activeclass="active"
+        event="click"
+        exactactiveclass="active"
+        routertag="a"
+        target="_self"
+      >
+        
+        Settings
+      
+      </cheadernavlink-stub>
+    </cheadernavitem-stub>
+  </cheadernav-stub>
+   
+  <cheadernav-stub>
+    <button
+      class="c-header-nav-btn"
+    >
+      <cicon-stub
+        name="cil-sun"
+      />
+    </button>
+     
+    <theheaderdropdownnotif-stub />
+     
+    <theheaderdropdowntasks-stub />
+     
+    <theheaderdropdownmssgs-stub />
+     
+    <theheaderdropdownaccnt-stub />
+     
+    <ctoggler-stub
+      class="d-md-down-none"
+      inheader="true"
+      tag="button"
+    >
+      <cicon-stub
+        name="cil-applications-settings"
+        size="lg"
+      />
+    </ctoggler-stub>
+  </cheadernav-stub>
+   
+  <csubheader-stub
+    class="px-3"
+    tag="div"
+  >
+    <cbreadcrumbrouter-stub
+      class="border-0"
+    />
+  </csubheader-stub>
+</cheader-stub>
+`;
