@@ -27,12 +27,8 @@ import i18n from './i18n';
 
 
 
-// let pusher = new Pusher('ujaEp3Zv', {
-//   cluster: 'mt1',
-//   wsHost:"soc.twistfleet.com",
-//   wssPort: 6001
-// });
-let pusher = new Pusher('1d31a5a17f962ff58f9a', {
+
+let pusher = new Pusher('', {
   cluster: 'eu',
 
 });
