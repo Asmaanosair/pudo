@@ -14,9 +14,9 @@ class PaymentController extends Controller
 // ...OR, optionally, you can set the credentials manually
         \Genesis\Config::setEndpoint(\Genesis\API\Constants\Endpoints::EMERCHANTPAY);
         \Genesis\Config::setEnvironment(\Genesis\API\Constants\Environments::STAGING);
-        \Genesis\Config::setUsername('pudo');
-        \Genesis\Config::setPassword('pudo@123');
-        \Genesis\Config::setToken('f1d218ac043aa356225eb668b1511cc4190ab3c00822888945b333d1b22ffcb8');
+        \Genesis\Config::setUsername('');
+        \Genesis\Config::setPassword('p');
+        \Genesis\Config::setToken('');
 
         $genesis = new \Genesis\Genesis('Financial\Cards\Authorize');
 
