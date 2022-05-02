@@ -8,7 +8,7 @@
     <meta name="asset-url" content="{{substr(asset(''), 0, -1) }}">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>Pudo</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhcthMxe-_IQy1Jqa5KwcdO4kYNSQYcH8&libraries=drawing,places,geometry">
+    <script src="https://maps.googleapis.com/maps/api/js?key==drawing,places,geometry">
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
