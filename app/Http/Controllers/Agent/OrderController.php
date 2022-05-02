@@ -96,7 +96,7 @@ class OrderController extends Controller
         $inputs['order_status_id'] = 1;
         $inputs['code'] =$request->shipment_number;
         $inputs['city_id'] = $city->id;
-        $result = Http::get("https://maps.googleapis.com/maps/api/distancematrix/json?origins=heading=90:" . $request->pick_up_lat . "," . $request->pick_up_lng . "&destinations=" . $request->delivery_lat . "," . $request->delivery_lng . "&mode=driving&key=AIzaSyBChUzS-ZK4363fr2b_CAvd-zMYugstSWQ")->json();
+        $result = Http::get("https://maps.googleapis.com/maps/api/distancematrix/json?origins=heading=90:" . $request->pick_up_lat . "," . $request->pick_up_lng . "&destinations=" . $request->delivery_lat . "," . $request->delivery_lng . "&mode=driving&key=")->json();
 
         if ($result["status"] == "OK") {
             $kilos_count = $result["rows"][0]["elements"][0]["distance"]["value"] / 1000;
@@ -221,7 +221,7 @@ class OrderController extends Controller
 
         $user = $request->client;
 
-        $result = Http::get("https://maps.googleapis.com/maps/api/distancematrix/json?origins=heading=90:" . $request->pick_up_lat . "," . $request->pick_up_lng . "&destinations=" . $request->delivery_lat . "," . $request->delivery_lng . "&key=AIzaSyBChUzS-ZK4363fr2b_CAvd-zMYugstSWQ")->json();
+        $result = Http::get("https://maps.googleapis.com/maps/api/distancematrix/json?origins=heading=90:" . $request->pick_up_lat . "," . $request->pick_up_lng . "&destinations=" . $request->delivery_lat . "," . $request->delivery_lng . "&key=")->json();
 
         $inputs = $request->all();
 
